@@ -62,7 +62,7 @@ public class FlutterMailerPlugin implements MethodCallHandler {
         Context context = mRegistrar.context();
         Intent intent = new Intent(Intent.ACTION_SENDTO,
                 Uri.parse(MAILTO_SCHEME));
-        intent.setType("message/rfc822");
+        intent.setType("text/plain");
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         if (options.hasArgument(SUBJECT)) {
